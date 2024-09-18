@@ -12,7 +12,7 @@ export class CertificationService {
 
   constructor(private http:HttpClient, private service:AdminService) { }
 
-  private apiUrl:string = "https://portfoliobackend-qy84.onrender.com";
+  private apiUrl:string = "${backend_api}";
   
   public addCertification(certification: certification){
     return this.http.post(`${this.apiUrl}/admin/addcertification`, certification, {

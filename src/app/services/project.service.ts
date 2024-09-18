@@ -11,7 +11,7 @@ export class ProjectService {
 
   constructor(private http:HttpClient, private service:AdminService) { }
 
-  private apiUrl:string = "https://portfoliobackend-qy84.onrender.com";
+  private apiUrl:string = "${backend_api}";
   
   public addProject(project: FormData){
     return this.http.post(`${this.apiUrl}/admin/addproject`, project, {

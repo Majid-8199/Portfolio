@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl:string = "https://portfoliobackend-qy84.onrender.com/all";
+  private apiUrl:string = "${backend_api}/all";
   constructor(private http: HttpClient) {}
 
   public getUserDetails() {
