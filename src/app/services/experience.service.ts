@@ -11,7 +11,7 @@ export class ExperienceService {
 
   constructor(private http:HttpClient, private service:AdminService) { }
 
-  private apiUrl:string = "${backend_api}";
+  private apiUrl:string = "${process.env.BACKEND_API}";
   
   public addExperience(experience: experience){
     return this.http.post(`${this.apiUrl}/admin/addexperience`, experience, {

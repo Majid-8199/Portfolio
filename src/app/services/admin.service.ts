@@ -12,7 +12,7 @@ export class AdminService {
   TOKEN = 'ecom-token';
   USER = 'ecom-user';
 
-  private apiUrl:string = "${backend_api}";
+  private apiUrl:string = "${process.env.BACKEND_API}";
   
 
   constructor( private http:HttpClient, @Inject(PLATFORM_ID) private platformId: object) { }

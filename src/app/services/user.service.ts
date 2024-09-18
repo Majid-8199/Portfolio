@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl:string = "${backend_api}/all";
+  private apiUrl:string = "${process.env.BACKEND_API}/all";
   constructor(private http: HttpClient) {}
 
   public getUserDetails() {

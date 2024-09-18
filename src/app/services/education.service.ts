@@ -11,7 +11,7 @@ export class EducationService {
 
   constructor(private http:HttpClient, private service:AdminService) { }
 
-  private apiUrl:string = "${backend_api}";
+  private apiUrl:string = "${process.env.BACKEND_API}";
   
   public addEducation(education: education){
     return this.http.post(`${this.apiUrl}/admin/addeducation`, education, {

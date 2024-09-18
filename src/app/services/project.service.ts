@@ -11,7 +11,7 @@ export class ProjectService {
 
   constructor(private http:HttpClient, private service:AdminService) { }
 
-  private apiUrl:string = "${backend_api}";
+  private apiUrl:string = "${process.env.BACKEND_API}";
   
   public addProject(project: FormData){
     return this.http.post(`${this.apiUrl}/admin/addproject`, project, {
