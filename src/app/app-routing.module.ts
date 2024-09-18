@@ -24,6 +24,7 @@ import { P1projectComponent } from './user/p1project/p1project.component';
 import { P2projectComponent } from './user/p2project/p2project.component';
 import { UpdateAdminComponent } from './admin/User/update-admin/update-admin.component';
 import { UpdateEducationComponent } from './admin/Education/update-education/update-education.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   { path: 'addCertification', component: AddCertificationComponent },
@@ -53,7 +54,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
