@@ -11,7 +11,7 @@ export class ExperienceService {
 
   constructor(private http:HttpClient, private service:AdminService) { }
 
-  private apiUrl:string = "https://portfoliobackend-qy84.onrender.com";
+  private apiUrl:string = "https://portfoliobackend-kb5d.onrender.com";
   
   public addExperience(experience: experience){
     return this.http.post(`${this.apiUrl}/admin/addexperience`, experience, {
