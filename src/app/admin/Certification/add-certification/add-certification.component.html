@@ -1,0 +1,22 @@
+<div class="top">
+    <h2>ADD CERTIFICATION</h2>
+</div>
+<div class="container">
+    <form #myform="ngForm" (ngSubmit)="addCertification(myform.value)">
+        <div class="form-group">
+            <label for="name">Certification Name:</label>
+            <input type="text" id="name" name="name" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="center">Center:</label>
+            <input type="text" id="center" name="center" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" ngModel required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add Certification">
+        </div>
+    </form>
+</div>

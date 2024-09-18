@@ -1,0 +1,32 @@
+<div class="container" *ngIf="project">
+    <div class="top">
+        <div class="left">
+            <div class="image">
+                <img [src]="'data:image/png;base64,' + project.imgBase64" alt="{{project.name}}">
+            </div>
+            <div class="name">
+                <h1>{{project.name}}</h1>
+            </div>
+        </div>
+        <div class="right">
+            <div class="simage">
+                <a href="https://github.com/Majid-8199" target="_blank"><img src="assets/images/github.png" alt="" class="smg"></a>
+            </div>
+            <div class="simage">
+                <a [routerLink]="['/p2', project.id]"><img src="assets/images/right-arrow.png" alt="" class="smg"></a>
+            </div>
+        </div>
+    </div>
+    <div class="divd">
+        <h3>Description:</h3>
+        <div class="description">
+            <p>{{project.largedescription}}</p>
+        </div>
+    </div>
+    <div class="divt">
+        <h3>Tech Stack:</h3>
+        <div class="techstack">
+            <p>{{project.techstack}}</p>
+        </div>
+    </div>
+</div>

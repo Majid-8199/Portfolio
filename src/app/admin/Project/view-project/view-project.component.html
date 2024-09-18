@@ -1,0 +1,40 @@
+<div class="head">
+    <div class="actionbuttons">
+        <button (click)="addProject()" class="btn add-button">Add Project</button>
+    </div>
+</div>
+<div class="bottom">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Project Name</th>
+                <th>Small Description</th>
+                <th>Large Description</th>
+                <th>Tech Stack</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let project of projects">
+                <td>{{project.id}}</td>
+                <td>
+                    <div class="image">
+                        <img [src]="'data:image/png;base64,' + project.imgBase64" alt="Select Image">
+                    </div>
+                </td>
+                <td>{{project.name}}</td>
+                <td>{{project.smalldescription}}</td>
+                <td>{{project.largedescription}}</td>
+                <td>{{project.techstack}}</td>
+                <td>
+                    <div class="actionbuttons">
+                        <button (click)="updateProjectById(project.id)" class="btn update-button">Update</button>
+                        <button (click)="deleteProjectById(project.id)" class="btn delete-button">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

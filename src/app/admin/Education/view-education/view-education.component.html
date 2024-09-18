@@ -1,0 +1,34 @@
+<div class="head">
+    <div class="actionbuttons">
+        <button (click)="addEducation()" class="btn add-button">Add Education</button>
+    </div>
+</div>
+<div class="bottom">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>College Name</th>
+                <th>Place</th>
+                <th>Duration</th>
+                <th>Course</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let education of educations">
+                <td>{{education.id}}</td>
+                <td>{{education.college}}</td>
+                <td>{{education.place}}</td>
+                <td>{{education.duration}}</td>
+                <td>{{education.course}}</td>
+                <td>
+                    <div class="actionbuttons">
+                        <button (click)="updateEducationById(education.id)" class="btn update-button">Update</button>
+                        <button (click)="deleteEducationById(education.id)" class="btn delete-button">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

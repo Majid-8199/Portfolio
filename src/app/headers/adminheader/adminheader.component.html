@@ -1,0 +1,31 @@
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <a href="/updateUser">Portfolio.</a>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="viewExperience">Experience</a></li>
+        <li><a href="viewCertification">Certification</a></li>
+        <li><a href="viewEducation">Education</a></li>
+        <li><a href="viewSkill">Skill</a></li>
+        <li><a href="viewProject">Project</a></li>
+        <li><a (click)="logOut()">LogOut</a></li>
+      </ul>
+      <div #toggleBtn class="menu">
+        <img src="assets\images\menu.png" alt="" />
+        <span #closeBtn class="close-btn" style="display: none;">×</span>
+      </div>
+    </div>
+    <div #dropdownMenu class="dropdown-menu">
+      <ul>
+        <li><a href="viewExperience">Experience</a></li>
+        <li><a href="viewCertification">Certification</a></li>
+        <li><a href="viewEducation">Education</a></li>
+        <li><a href="viewSkill">Skill</a></li>
+        <li><a href="viewProject">Project</a></li>
+        <li><a (click)="logOut()">LogOut</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

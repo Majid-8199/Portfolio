@@ -1,0 +1,3 @@
+<app-adminheader *ngIf="isAdminLoggedIn"></app-adminheader>
+<app-userheader *ngIf="!isAdminLoggedIn"></app-userheader>
+<router-outlet></router-outlet>

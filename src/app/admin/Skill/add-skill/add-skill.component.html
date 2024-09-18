@@ -1,0 +1,27 @@
+<div class="top">
+    <h2>ADD SKILL</h2>
+</div>
+<div class="container">
+  <form #myform="ngForm" (ngSubmit)="onSubmit()">
+    <div class="details">
+        
+      <div class="image-preview">
+        <img [src]="imagePreview" />
+      </div>
+
+      <label for="img">Skill Image:</label>
+      <input type="file" (change)="onFileSelected($event)" name="img" ngModel required />
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" ngModel required />
+
+      <label for="category">Category:</label>
+      <input type="text" id="category" name="category" ngModel required />
+
+      <div>
+        <input type="submit" value="Add Skill" />
+      </div>
+    </div>
+  </form>
+</div>
+  

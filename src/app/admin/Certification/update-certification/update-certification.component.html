@@ -1,0 +1,23 @@
+<div class="top">
+    <h2>UPDATE CERTIFICATION</h2>
+</div>
+<div class="container">
+    <form #myform="ngForm" (ngSubmit)="updateCertificationById(CertificationId, myform.value)">
+        <div class="form-group">
+            <label for="name">Certification Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="certification.name" required>
+        </div>
+        <div class="form-group">
+            <label for="center">Center:</label>
+            <input type="text" id="center" name="center" [(ngModel)]="certification.center" required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" [(ngModel)]="certification.duration" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Update Certification">
+            <button type="button" (click)="goBack()">Back</button>
+        </div>
+    </form>
+</div>

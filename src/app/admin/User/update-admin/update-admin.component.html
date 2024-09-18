@@ -1,0 +1,52 @@
+<div class="top">
+    <h2>UPDATE User</h2>
+</div>
+<div class="container">
+    <form #myform="ngForm" (ngSubmit)="updateUser( myform.value)" *ngIf="user">
+        <div >
+            <div class="image-preview" >
+                <img [src]="'data:image/png;base64,' + user.imgBase64" alt="Select Image">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" [(ngModel)]="user.fullname" required>
+        </div>
+        <div class="form-group">
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation" [(ngModel)]="user.designation" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" [(ngModel)]="user.description" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" [(ngModel)]="user.email" required>
+        </div>
+        <div class="form-group">
+            <label for="ph">Mobile Number:</label>
+            <input type="text" id="ph" name="ph" [(ngModel)]="user.ph" required>
+        </div>
+        <div class="form-group">
+            <label for="instagram">Instagram:</label>
+            <input type="text" id="instagram" name="instagram" [(ngModel)]="user.instagram" required>
+        </div>
+        <div class="form-group">
+            <label for="github">GitHub:</label>
+            <input type="text" id="github" name="github" [(ngModel)]="user.github" required>
+        </div>
+        <div class="form-group">
+            <label for="linkedin">LinkedIn:</label>
+            <input type="text" id="linkedin" name="linkedin" [(ngModel)]="user.linkedin" required>
+        </div>
+        <div class="form-group">
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place" [(ngModel)]="user.place" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Update Education">
+            <button type="button" (click)="goBack()">Back</button>
+        </div>
+    </form>
+</div>

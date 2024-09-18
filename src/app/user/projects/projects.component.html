@@ -1,0 +1,26 @@
+<div class="container">
+        <div class="project" *ngFor="let project of projects">
+            <a [routerLink]="['/p1', project.id]">
+                <div class="head">
+                    <div class="image">
+                        <img [src]="'data:image/png;base64,' + project.imgBase64" alt="{{project.name}}">
+                    </div>
+                    <div class="name">
+                        <h1>{{project.name}}</h1>
+                    </div>
+                </div>
+                <div class="description">
+                    <h3>DESCRIPTION</h3>
+                    <p>
+                        {{project.smalldescription}}
+                    </p>
+                </div>
+                <div class="techstack">
+                    <h3>TECH STACK</h3>
+                    <p>
+                        {{project.techstack}}
+                    </p>
+                </div>
+            </a>
+        </div>
+</div>

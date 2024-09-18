@@ -1,0 +1,38 @@
+<div class="container" *ngIf="project">
+    <div class="sidex">
+        <div class="side1">
+            <div class="top">
+                <div class="image">
+                    <img [src]="'data:image/png;base64,' + project.imgBase64" alt="{{project.name}}">
+                </div>
+                <div class="name">
+                    <h1>{{project.name}}</h1>
+                </div>
+            </div>
+            <div class="features" *ngIf="project.features && project.features.length">
+                <div>
+                    <h3>Features</h3>
+                </div>
+                <div *ngFor="let feature of project.features">
+                    <p class="featureitem"><span>{{feature.heading}}:</span> {{feature.description}}</p>
+                </div>           
+            </div>
+        </div>
+        <div class="ss">
+            <h3>Screenshots</h3>
+        </div>
+        <div class="side2" *ngIf="project.screenshots && project.screenshots.length">
+            <div class="ssimage" *ngFor="let screenshot of project.screenshots">
+                <img [src]="'data:image/png;base64,' + project.imgBase64">
+            </div>
+        </div>
+    </div>
+    <div class="side3">
+        <div class="simage">
+            <a href="https://github.com/Majid-8199" target="_blank"><img src="assets/images/github.png" alt=""></a>
+        </div>
+        <div class="simage">
+        <a href="https://www.linkedin.com/in/abdulmajide/" target="_blank"><img src="assets/images/linkedin.png" alt=""></a>
+        </div>
+    </div>
+</div>

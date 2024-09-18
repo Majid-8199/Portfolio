@@ -1,0 +1,27 @@
+<div class="top">
+    <h2>UPDATE EXPERIENCE</h2>
+</div>
+<div class="container">
+    <form #myform="ngForm" (ngSubmit)="updateExperienceById(ExperienceId, myform.value)">
+        <div class="form-group">
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" name="company" [(ngModel)]="experience.company" required>
+        </div>
+        <div class="form-group">
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation" [(ngModel)]="experience.designation" required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" [(ngModel)]="experience.duration" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Designation:</label>
+            <input type="text" id="description" name="description" [(ngModel)]="experience.description" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Update Certification">
+            <button type="button" (click)="goBack()">Back</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+<div class="head">
+    <div class="actionbuttons">
+        <button (click)="addSkill()" class="btn add-button">Add Skill</button>
+    </div>
+</div>
+<div class="bottom">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let skill of skills">
+                <td>{{skill.id}}</td>
+                <td>
+                    <div class="image">
+                        <img [src]="'data:image/png;base64,' + skill.imgBase64" alt="Select Image">
+                    </div>
+                </td>
+                <td>{{skill.name}}</td>
+                <td>{{skill.category}}</td>
+                <td>
+                    <div class="actionbuttons">
+                        <button (click)="updateSkillById(skill.id)" class="btn update-button">Update</button>
+                        <button (click)="deleteSkillById(skill.id)" class="btn delete-button">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

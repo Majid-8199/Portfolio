@@ -1,0 +1,28 @@
+networks:
+  my-network:
+    driver: bridge
+
+services:
+  angular-app:
+    build: ./
+    ports:
+      - "4200:4200" 
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+    networks:
+      - my-network
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80" 
+    volumes:
+      - ./conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
+      - ./dist/portfolio:/usr/share/nginx/html
+    depends_on:
+      - angular-app
+    networks:
+      - my-network
+
+volumes:
+  mysql-data:

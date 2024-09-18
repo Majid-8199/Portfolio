@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="up">
+        <div class="side1">
+            <img src="assets/images/contact.png" alt="Contact Image">
+        </div>
+        <div class="side2">
+            <form #myform="ngForm" (ngSubmit)="sendMail(myform.value)">
+                <div class="form-group-name">
+                    <div>
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" ngModel required>
+                    </div>
+                    <div >
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" ngModel required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" ngModel required>
+                </div>
+                <div class="form-group">
+                    <label for="ph">Mobile Number:</label>
+                    <input type="text" id="ph" name="ph" ngModel required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" ngModel required></textarea>
+                  </div>
+                <div class="form-group">
+                    <input type="submit" value="Send Mail">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="down" *ngIf="user">
+        <div class="dleft">
+            <div class="d1">
+                <div class="image">
+                    <img src="assets\images\phone.png" alt="">
+                </div>
+                <div class="con">
+                    <h4>{{user.ph}}</h4>
+                </div>
+            </div>
+            <div class="d2">
+                <div class="image">
+                    <img src="assets\images\mail.png" alt="">
+                </div>
+                <div class="con">
+                    <h4>{{user.email}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="d3">
+            <div class="image">
+                <a href="https://www.linkedin.com/in/abdulmajide/" target="_blank"><img src="assets\images\linkedin.png" alt=""></a>
+            </div>
+            <div class="image">
+                <a href="https://github.com/Majid-8199" target="_blank"><img src="assets\images\github.png" alt=""></a>
+            </div>
+            <div class="image">
+                <a href="https://www.instagram.com/_maji._?igsh=anF3Y21vZWxldHNj" target="_blank"><img src="assets\images\instagram.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="top">
+    <h2>ADD PROJECT</h2>
+</div>
+<div class="container">
+  <form #myform="ngForm" (ngSubmit)="onSubmit()">
+    <div class="details">
+      <h3>PROJECT DETAILS</h3>
+
+      <div class="image-preview">
+        <img [src]="imagePreview" />
+      </div>
+
+      <label for="img">Project Image:</label>
+      <input type="file" (change)="onFileSelected($event)" name="img" ngModel required />
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" ngModel required />
+
+      <label for="largedescription">Large Description:</label>
+      <input type="text" id="largedescription" name="largedescription" ngModel required />
+
+      <label for="smalldescription">Small Description:</label>
+      <input type="text" id="smalldescription" name="smalldescription" ngModel required />
+
+      <label for="techstack">Tech Stack:</label>
+      <input type="text" id="techstack" name="techstack" ngModel required />
+
+      <h3>ADD FEATURES</h3>
+      <div *ngFor="let feature of features; let i = index">
+        <label for="heading-{{i}}">Feature Heading:</label>
+        <input type="text" id="heading-{{i}}" [(ngModel)]="feature.heading" name="heading-{{i}}" required />
+
+        <label for="description-{{i}}">Feature Description:</label>
+        <input type="text" id="description-{{i}}" [(ngModel)]="feature.description" name="description-{{i}}" required />
+
+        <button type="button" (click)="removeFeature(i)">Remove Feature</button>
+      </div>
+      <button type="button" (click)="addFeature()">Add Another Feature</button>
+
+      <h3>ADD SCREENSHOTS</h3>
+      <div *ngFor="let screenshot of screenshots; let j = index">
+        <div class="ss-preview">
+          <img [src]="screenshot.preview"/>
+        </div>
+        
+        <label for="img-{{j}}">Screenshot Image:</label>
+        <input type="file" (change)="onScreenshotSelected($event, j)" name="img-{{j}}" ngModel required />
+
+        <button type="button" (click)="removeScreenshot(j)">Remove Screenshot</button>
+      </div>
+      <button type="button" (click)="addScreenshot()">Add Another Screenshot</button>
+
+      <div>
+        <input type="submit" value="Add Project" />
+      </div>
+    </div>
+  </form>
+</div>
+  

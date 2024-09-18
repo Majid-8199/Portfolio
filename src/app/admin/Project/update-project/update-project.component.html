@@ -1,0 +1,34 @@
+<div class="c">
+    <div class="top">
+        <h2>UPDATE PROJECT</h2>
+    </div>
+    <div class="container">
+        <form #myform="ngForm">
+            <div>
+                <div class="image-preview" *ngIf="project.imgBase64">
+                    <img [src]="'data:image/png;base64,' + project.imgBase64">
+                </div>
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" [(ngModel)]="project.name" required>
+            </div>
+            <div>
+                <label for="largedescription">Large Description:</label>
+                <input type="text" id="largedescription" name="largedescription" [(ngModel)]="project.largedescription" required>
+            </div>
+            <div>
+                <label for="smalldescription">Small Description:</label>
+                <input type="text" id="smalldescription" name="smalldescription" [(ngModel)]="project.smalldescription" required>
+            </div>
+            <div>
+                <label for="techstack">Tech Stack:</label>
+                <input type="text" id="techstack" name="techstack" [(ngModel)]="project.techstack" required>
+            </div>
+            <div>
+                <input type="submit" value="Update Project" (click)="updateProject(projectId,myform.value)">
+                <button type="button" (click)="goBack()">Back</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="head">
+    <div class="actionbuttons">
+        <button (click)="addCertification()" class="btn add-button">Add Certification</button>
+    </div>
+</div>
+<div class="bottom">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Certification Name</th>
+                <th>Center</th>
+                <th>Duration</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let certification of certifications">
+                <td>{{certification.id}}</td>
+                <td>{{certification.name}}</td>
+                <td>{{certification.center}}</td>
+                <td>{{certification.duration}}</td>
+                <td>
+                    <div class="actionbuttons">
+                        <button (click)="updateCertificationById(certification.id)" class="btn update-button">Update</button>
+                        <button (click)="deleteCertificationById(certification.id)" class="btn delete-button">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

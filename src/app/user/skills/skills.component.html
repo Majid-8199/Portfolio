@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="left">
+    <div class="categories" *ngFor="let category of leftCategories">
+      <div class="categoryname"><h3>{{category}}</h3></div>
+      <div class="divi">
+        <ng-container *ngFor="let skill of getSkillsByCategory(category)">
+          <div class="image">
+            <img [src]="'data:image/png;base64,' + skill.imgBase64" alt="{{skill.name}}">
+            <p class="name">{{skill.name}}</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="categories" *ngFor="let category of rightCategories">
+      <div class="categoryname"><h3>{{category}}</h3></div>
+      <div class="divi">
+        <ng-container *ngFor="let skill of getSkillsByCategory(category)">
+          <div class="image">
+            <img [src]="'data:image/png;base64,' + skill.imgBase64" alt="{{skill.name}}">
+            <p class="name">{{skill.name}}</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

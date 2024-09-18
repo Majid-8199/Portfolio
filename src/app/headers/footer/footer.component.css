@@ -1,0 +1,147 @@
+footer {
+    background-color: #b7673C;
+    color: #fff;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #b7673C;
+    padding-top: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    background-color: #b7673C;
+}
+
+h3 {
+    margin-bottom: 20px;
+    background-color: #b7673C;
+}
+
+.footer-section ul {
+    list-style: none;
+    background-color: #b7673C;
+}
+
+ul li {
+    margin-bottom: 10px;
+    background-color: #b7673C;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #b7673C;
+}
+
+.footer-section ul li a:hover {
+    color: #3A5154;
+}
+
+.d2 ul li a:hover {
+    color: #3A5154;
+}
+
+.footer-bottom p{
+    background-color: #b7673C;
+}
+
+.d3{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    background-color: #b7673C;
+}
+
+.d2{
+    width: 40%;
+    
+}
+
+.d3 .image{
+    background-color: #b7673C;
+}
+
+img{
+        height: 40px;
+        margin-top: 10px;
+        background-color: #b7673C;
+        cursor: pointer;
+}
+
+.footer-section li{
+    display: flex;
+    gap: 10px;
+}
+
+.contactsection{
+    min-width: 60%;
+    margin: 10px;
+    background-color: #b7673C;
+}
+
+.s1{
+    display: flex;
+    background-color: #b7673C;
+    justify-content: space-between;
+}
+
+.s2{
+    display: flex;
+    background-color: #b7673C;
+}
+
+.s2 li{
+    width: 30%;
+    display: flex;
+    background-color: #b7673C;
+}
+
+.s2 p{
+    background-color: #b7673C;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+li{
+    list-style: none;
+}
+
+p, a, ul, .d2{
+    background-color: #b7673C;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 1300px) {
+    .s2{
+        flex-direction: column;
+    }
+    .s2 li{
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .contactsection{
+        min-width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    .contactsection{
+        min-width: 90%;
+    }
+    .s1{
+        flex-direction: column;
+    }
+}

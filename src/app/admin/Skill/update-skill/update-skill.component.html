@@ -1,0 +1,24 @@
+<div class="top">
+    <h2>UPDATE SKILL</h2>
+</div>
+<div class="container">
+    <form #myform="ngForm">
+        <div>
+            <div class="image-preview" >
+                <img [src]="'data:image/png;base64,' + skill.imgBase64" alt="Select Image">
+            </div>
+        </div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="skill.name" required>
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" [(ngModel)]="skill.category" required>
+        </div>
+        <div>
+            <input type="submit" value="Update Skill" (click)="updateSkill(skillId,myform.value)">
+            <button type="button" (click)="goBack()">Back</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,31 @@
+<div class="container" *ngIf="user">
+    <div class="content1">
+        <div class="top">
+            <div class="side1">
+                <div>
+                    <h1 class="heading1">Hi, <span class="heading2">I'm</span></h1>
+                </div>
+                <div>
+                    <h1 class="name">{{user.fullname}}</h1>
+                </div>
+                <div>
+                    <h3 class="designation">{{user.designation}}</h3>
+                </div>
+            </div>
+            <div class="side2">
+                <div class="img">
+                    <img [src]="'data:image/png;base64,' + user.imgBase64" alt="{{user.name}}">
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p class="description">{{user.description}}</p>
+        </div>
+        <div class="cv">
+            <div class="actionbuttons">
+                <button (click)="downloadCV(1)" class="btn add-button">Download CV</button>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

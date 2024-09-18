@@ -1,0 +1,96 @@
+.container {
+    width: 50%;
+    margin: auto;
+    background-color: #3A5154;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px #B7673C;
+    margin-top: 30px;
+    display: flex;
+}
+
+div{
+    background-color: white;
+    background-color: #3A5154;
+}
+
+form{
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    background-color: #3A5154;
+}
+
+input[type="text"], input[type="number"], input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+input[type="submit"], button {
+    background-color: #B7673C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #885134;
+}
+
+.top{
+    color: #B7673C;
+    display: flex;
+    width: 40%;
+    margin: auto;
+    background-color: #B9B0B2;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+h3{
+    background-color: #3A5154;
+    color: #929AA2;
+}
+
+.image-preview{
+    margin: auto;    
+    height: 100px;
+    width: 100px;
+    border: 2px solid #B7673C;
+}
+
+.image-preview img{
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #3A5154;
+}
+
+.ss-preview{
+    margin: auto;    
+    height: 100px;
+    width: 150px;
+    border: 2px solid #B7673C;
+}
+
+.ss-preview img{
+    height: 100%;
+    margin-bottom: 10px;
+    background-color: #3A5154;
+}
+
+.details{
+    margin-top: -19px;
+}

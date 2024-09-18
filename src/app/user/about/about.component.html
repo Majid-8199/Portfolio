@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="experiencediv">
+        <h3>EXPERIENCES</h3>
+        <div class="experience" *ngFor="let exp of experiences">
+            <h2 class="designation">{{exp.designation}}</h2>
+            <div class="cdetails">
+                <p class="company">{{exp.company}}</p>
+                <p class="duration">{{exp.duration}}</p>
+            </div>
+            <p class="description">{{exp.description}}</p>
+        </div>
+    </div>
+    <div class="certificationdiv">
+        <h3>CERTIFICATIONS</h3>
+        <div class="c1">
+            <div class="certification" *ngFor="let cert of certifications">
+                <h2 class="name">{{cert.name}}</h2>
+                <p class="duration1">{{cert.duration}}</p>
+                <p class="center">{{cert.center}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="educationdiv">
+        <h3>EDUCATION</h3>
+        <div class="e1">
+            <div class="education" *ngFor="let edu of educations">
+                <h2 class="college">{{edu.college}}</h2>
+                <p class="place">{{edu.place}}</p>
+                <p class="duration2">{{edu.duration}}</p>
+                <p class="course">{{edu.course}}</p>
+            </div>
+        </div>
+    </div>
+</div>

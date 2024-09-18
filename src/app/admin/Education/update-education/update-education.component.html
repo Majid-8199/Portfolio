@@ -1,0 +1,27 @@
+<div class="top">
+    <h2>UPDATE EDUCATION</h2>
+</div>
+<div class="container">
+    <form #myform="ngForm" (ngSubmit)="updateEducationById(EducationId, myform.value)">
+        <div class="form-group">
+            <label for="college">College Name:</label>
+            <input type="text" id="college" name="college" [(ngModel)]="education.college" required>
+        </div>
+        <div class="form-group">
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place" [(ngModel)]="education.place" required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" [(ngModel)]="education.duration" required>
+        </div>
+        <div class="form-group">
+            <label for="course">Course:</label>
+            <input type="text" id="course" name="course" [(ngModel)]="education.course" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Update Education">
+            <button type="button" (click)="goBack()">Back</button>
+        </div>
+    </form>
+</div>

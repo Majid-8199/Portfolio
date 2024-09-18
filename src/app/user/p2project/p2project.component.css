@@ -1,0 +1,144 @@
+.container{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 50px;
+    min-height: 80vh;
+}
+.featureitem{
+    margin-top: 10px;
+}
+.sidex{
+    display: flex;
+}
+.side1, .side2, .side3{
+    margin: auto;
+}
+.side1{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.side2{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.side3{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.top{
+    display: flex;
+}
+.features{
+    margin: auto;
+    color: #3A5154;
+}
+.image{
+    height: 100px;
+    width: 100px;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+}
+.simage{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.simage img{
+    height: 100%;
+    width: 100%;
+}
+
+.ssimage{
+    height: 150px;
+    width: 230px;
+    border: 2px solid white;
+    margin: auto;
+}
+
+.ssimage img{
+    height: 100%;
+    width: 100%;
+}
+
+.ss{
+    display: none;
+}
+
+.name{
+    margin: auto;
+    margin-left: 15px;margin: auto;
+    margin-left: 15px;
+    color: #b7673C;
+}
+
+h3{
+    color: #b7673C;
+}
+
+span{
+    font-weight: 700;
+}
+
+@media (max-width:1500px){
+    .container{
+        flex-direction: column;
+    }
+    .side3{
+        order: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: end;
+    }
+    .sidex{
+        order: 1;
+    }
+}
+
+@media (max-width:1400px){
+    .side2{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:1150px){
+    .sidex{
+        flex-direction: column;
+    }
+    .side1{
+        width: 90%;
+    }
+    .side2{
+        width: 90%;
+        grid-template-columns: repeat(3,1fr);
+        margin: auto;
+    }
+    .ss{
+        display: flex;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media (max-width:840px){
+    .side2{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:580px){
+    .side2{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
