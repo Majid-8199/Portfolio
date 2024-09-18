@@ -11,7 +11,7 @@ export class EducationService {
 
   constructor(private http:HttpClient, private service:AdminService) { }
 
-  private apiUrl:string = "${process.env.BACKEND_API}";
+  private apiUrl:string = "https://portfoliobackend-qy84.onrender.com";
   
   public addEducation(education: education){
     return this.http.post(`${this.apiUrl}/admin/addeducation`, education, {

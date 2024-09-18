@@ -2,7 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { certification } from '../dto/certification';
 import { Observable } from 'rxjs';
-import { UserService } from './user.service';
 import { AdminService } from './admin.service';
 
 @Injectable({
@@ -12,7 +11,7 @@ export class CertificationService {
 
   constructor(private http:HttpClient, private service:AdminService) { }
 
-  private apiUrl:string = "${process.env.BACKEND_API}";
+  private apiUrl:string = "https://portfoliobackend-qy84.onrender.com";
   
   public addCertification(certification: certification){
     return this.http.post(`${this.apiUrl}/admin/addcertification`, certification, {

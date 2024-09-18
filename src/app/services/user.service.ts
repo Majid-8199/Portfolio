@@ -11,23 +11,23 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl:string = "${process.env.BACKEND_API}/all";
+  private apiUrl?:string = "https://portfoliobackend-qy84.onrender.com";
   constructor(private http: HttpClient) {}
 
   public getUserDetails() {
-    return this.http.get(`${this.apiUrl}/getuser`);
+    return this.http.get(`${this.apiUrl}/all/getuser`);
   }
 
   public login(login: loginrequest): Observable<jwtrequest> {
-    return this.http.post<jwtrequest>(`${this.apiUrl}/login`, login);
+    return this.http.post<jwtrequest>(`${this.apiUrl}/all/login`, login);
   }
 
   public downloadCV(id: number) {
-    return this.http.get(`${this.apiUrl}/download/${id}`, { responseType: 'blob' });
+    return this.http.get(`${this.apiUrl}/all/download/${id}`, { responseType: 'blob' });
   }
 
   public sendmail(contact: contact) {
-    return this.http.post(`${this.apiUrl}/sendmail`, contact);
+    return this.http.post(`${this.apiUrl}/all/sendmail`, contact);
   }
 
 }

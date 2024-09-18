@@ -12,7 +12,7 @@ export class AdminService {
   TOKEN = 'ecom-token';
   USER = 'ecom-user';
 
-  private apiUrl:string = "${process.env.BACKEND_API}";
+  private apiUrl:string = "https://portfoliobackend-qy84.onrender.com";
   
 
   constructor( private http:HttpClient, @Inject(PLATFORM_ID) private platformId: object) { }
